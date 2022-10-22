@@ -1,0 +1,30 @@
+name: Alcov
+description: Abundance learning for SARS-CoV-2 variants
+keywords:
+  - bioinformatics tools
+  - Mutations
+tools:
+  - alcov:
+      description: |
+        Alcov takes a list of samples for identifying lineages.
+      homepage: https://github.com/Ellmen/alcov
+
+input:
+  - samples:
+      type: file
+      description: |
+        List of aligned .bam files with sample names in 2nd column
+
+output:
+  - results:
+      type: directory
+      description: Alcov visualizations
+      pattern: "alcov"
+  - versions:
+      type: file
+      description: File containing software versions
+      pattern: "versions.yml"
+
+authors:
+  - "@mshunjan"
+  - "@ellmen"

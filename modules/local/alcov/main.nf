@@ -1,5 +1,5 @@
-process ALCOVE {
-    tag "$alcove"
+process ALCOV {
+    tag "$alcov"
     label 'process_low'
 
     conda (params.enable_conda ? "bioconda::bwa-mem2=2.2.1" : null)
@@ -9,7 +9,7 @@ process ALCOVE {
     tuple val(meta), path(samples)
 
     output:
-    tuple val(meta), path("alcov"), emit: index
+    tuple val(meta), path("alcov")  , emit: results
     path "versions.yml"             , emit: versions
 
     when:
