@@ -1,8 +1,7 @@
-process ALCOV {
-    tag "$alcov"
+process RUN_ALCOV {
+    tag "$run_alcov"
     label 'process_low'
 
-    conda (params.enable_conda ? "bioconda::bwa-mem2=2.2.1" : null)
     container "TODO"
 
     input:
